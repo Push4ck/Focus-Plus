@@ -1,0 +1,299 @@
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+/* Resetting default styles for all elements */
+*, *:after, *:before {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    text-decoration: none;
+}
+
+/* Root level CSS variables for colors, font weights, etc. */
+:root {
+    /* Hue */
+    --hue-color: 250;
+
+      /* HSL color mode */
+    --first-color: hsl(var(--hue-color), 69%, 61%);
+    --first-color-second: hsl(var(--hue-color), 69%, 61%);
+    --first-color-alt: hsl(var(--hue-color), 57%, 53%);
+    --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+    --progress-color: hsl(var(--hue-color), 70%, 96%);
+    --container-color: #fff;
+
+    /* Font-weights */
+    --light: 200;
+    --normal: 400;
+    --heavy: 600;
+}
+
+/* Variable dark theme */
+body.dark-theme {
+    /* HSL color mode */
+    --first-color-second: hsl(var(--hue-color), 30%, 8%);
+    --text-color-light: hsl(var(--hue-color), 8%, 75%);
+    --progress-color: hsl(var(--hue-color), 29%, 16%);
+    --container-color: hsl(var(--hue-color), 29%, 16%);
+}
+
+/* Theme */
+body.dark-theme {
+    background-color: var(--first-color-alt);
+}
+
+/* Dark mode styles for the main container */
+body.dark-theme .container {
+    background-color: var(--container-color);
+}
+
+/* Dark mode styles for the main card */
+body.dark-theme .card {
+    background: var(--container-color);
+    color: var(--first-color);
+}
+
+/* Dark mode styles for the card header */
+body.dark-theme .card-header h1 {
+    color: var(--first-color-alt);
+}
+
+/* Dark mode styles for the card body */
+body.dark-theme .card-header-btn button {
+    color: var(--text-color-light);
+}
+
+body.dark-theme .card-header-btn button:hover {
+    color: var(--first-color-lighter);
+}
+
+body.dark-theme .card-header-btn i {
+    color: var(--first-color-lighter);
+}
+
+body.dark-theme .card-header-btn i:hover {
+    color: var(--first-color-alt);
+}
+
+body.dark-theme .card-header-btn .active {
+    outline: 3px solid var(--first-color-alt);
+    color: var(--first-color-lighter);
+}
+
+body.dark-theme .card-header-btn .active:hover {
+    color: var(--first-color-alt);
+}
+
+/* Dark mode styles for the progress bar */
+body.dark-theme .progress-bar .inner {
+    background: var(--progress-color);
+}
+
+/* Dark mode styles for the inner part of the progress bar */
+body.dark-theme .inner {
+    background: var(--progress-color);
+}
+
+/* Dark mode styles for the timer value in the inner part */
+body.dark-theme .inner h2 {
+    color: var(--title-primary-color);
+}
+
+/* Dark mode styles for the card footer */
+body.dark-theme .card-footer {
+    background-color: var(--container-color);
+}
+
+/* Dark mode styles for the buttons in the card footer */
+body.dark-theme .card-footer button {
+    background-color: var(--purple);
+    color: var(--first-color-lighter);
+}
+
+body.dark-theme .card-footer button i:hover {
+    color: var(--first-color-alt);
+}
+
+/* Applying 'Poppins' font to all elements within the body */
+body * {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Styling for the body element */
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--title-primary-color);
+}
+
+/* Styling for the main container */
+.container {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--container-color);
+}
+
+/* Styling for the main card */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 20px;
+    background: var(--container-color);
+    color: var(--first-color);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+                  rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+/* Styling for the card header */
+.card-header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Styling for the card header title */
+.card-header h1 {
+    font-weight: var(--heavy);
+    font-size: 24px;
+    color: var(--first-color-alt);
+}
+
+/* Styling for the buttons in the card header */
+.card-header-btn {
+    display: flex;
+    justify-content: stretch;
+    gap: 10px;
+    padding: 4px;
+}
+
+.card-header-btn i {
+    color: var(--first-color-second);
+    display: inline-block;
+    justify-content: stretch;
+    gap: 10px;
+    padding: 4px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.card-header-btn i:hover {
+    color: var(--first-color-alt);
+}
+
+.card-header-btn button {
+    padding: 8px;
+    border-radius: 20px;
+    background-color: var(--purple);
+    color: var(--title-primary-color);
+    cursor: pointer;
+}
+
+.card-header-btn button:hover {
+    color: var(--first-color-alt);
+}
+
+/* Styling for the active button in the card header */
+.card-header-btn .active {
+    outline: 3px solid var(--first-color-alt);
+}
+
+.card-header-btn .active:hover {
+    color: var(--first-color-alt);
+}
+
+/* Styling for the card body */
+.card-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+/* Styling for the progress bar */
+.progress-bar {
+    height: 180px;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: conic-gradient(var(--first-color-alt) 360deg, var(--title-primary-color) 0deg);
+    border-radius: 50%;
+    animation: pulse 3s infinite;
+    transition: all ease;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+                rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+                rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+/* Styling for the inner part of the progress bar */
+.inner {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--progress-color);
+    border-radius: 50%;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+                rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+                rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+/* Styling for the timer value in the inner part */
+.inner h2 {
+    color: var(--title-primary-color);
+    font-weight: var(--heavy);
+    font-size: 40px;
+}
+
+/* Styling for the card footer */
+.card-footer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+/* Styling for the buttons in the card footer */
+.card-footer button {
+    padding: 10px 12px;
+    border-radius: 6px;
+    background-color: var(--purple);
+    color: var(--title-primary-color);
+    cursor: pointer;
+}
+
+.card-footer button i {
+    font-size: 30px;
+}
+
+.card-footer button i:hover {
+    color: var(--first-color-alt);
+}
+
+/* Keyframe animation for the pulse effect */
+@keyframes pulse {
+    0% {
+        transform: scale(0.97);
+        box-shadow: 0 0 0 0 var(--first-color-lighter);
+    }
+    50% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px var(--first-color-alt);
+    }
+    100% {
+        transform: scale(0.97);
+        box-shadow: 0 0 0 0 var(--first-color-second);
+    }
+}

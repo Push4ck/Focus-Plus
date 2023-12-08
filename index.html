@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to the external stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- Favicon for the website -->
+    <link rel="icon" href="assets/images/icon_x_32.png" type="images/x-icon">
+    <title>Focus +</title>
+</head>
+<body>
+
+    <!-- Container for the entire content -->
+    <div class="container">
+        <!-- Card for the main content -->
+        <div class="card">
+            <!-- Header section of the card -->
+            <div class="card-header">
+                <h1>Focus +</h1>
+                <!-- Buttons to switch between Pomodoro and Short Break -->
+                <div class="card-header-btn">
+                    <button id="btn" class="active" onclick="changePomodoroType(defaultTimer);">Pomodoro</button>
+                    <i class="uil uil-moon change-theme" id="theme-button"></i>
+                    <button id="shortBreak" onclick="changePomodoroType(shortBreakTimer);">Short Break</button>
+                </div>
+            </div>
+
+            <!-- Body section of the card -->
+            <div class="card-body">
+                <!-- Progress bar with a timer display -->
+                <div class="progress-bar" id="round">
+                    <div class="inner">
+                        <h2 class="value">60:00</h2>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer section of the card -->
+            <div class="card-footer">
+                <!-- Buttons to start, stop, and reset the timer -->
+                <button class="start" onclick="startTimer();"><i class="uil uil-play"></i></button>
+                <button class="stop" onclick="stopTimer();"><i class="uil uil-stop-circle"></i></button>
+                <button class="reset"><i class="uil uil-history-alt"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="assets/js/main.js"></script>
+    
+</body>
+</html>
