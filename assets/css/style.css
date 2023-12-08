@@ -53,8 +53,6 @@ body.dark-theme .container {
 body.dark-theme .card {
     background: var(--container-color);
     color: var(--first-color);
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
-                rgba(0, 0, 0, 0.897) 0px 3px 6px;
 }
 
 /* Dark mode styles for the card header */
@@ -146,11 +144,8 @@ body {
     align-items: center;
     justify-content: center;
     padding: 20px;
-    border-radius: 20px;
     background: var(--container-color);
     color: var(--first-color);
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
-                rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 /* Styling for the card header */
